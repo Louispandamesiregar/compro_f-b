@@ -544,84 +544,81 @@ header.scrolled .nav-menu .btn-lang {
 footer {
     background-color: var(--secondary-bg); /* Menggunakan Hijau Sage agar serasi */
     color: var(--text-light);
-    padding: 4rem 0 2rem;
+    padding: 5rem 0 3rem;
+    text-align: center;
 }
 
-.footer-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 4rem;
-    margin-bottom: 3rem;
+.footer-wrapper-minimal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .footer-brand .logo-text {
     display: block;
     margin-bottom: 1rem;
     color: var(--text-light);
+    font-size: 2rem;
 }
 
 .footer-brand p {
-    margin-bottom: 1.5rem;
-    max-width: 300px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-light);
+    line-height: 1.6;
 }
 
-.social-media {
+.footer-links-minimal {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.social-media a {
-    color: var(--accent-color);
-    font-size: 1.2rem;
-}
-
-.social-media a:hover {
-    color: var(--text-light);
-}
-
-.footer-links h4,
-.footer-contact h4 {
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
+.footer-links-minimal a {
     font-size: 1rem;
     font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.footer-links ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.footer-links a {
-    font-size: 0.9rem;
-}
-
-.footer-links a:hover {
+.footer-links-minimal a:hover {
     color: var(--accent-color);
 }
 
-.footer-contact p {
+.social-media-minimal {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-media-minimal a {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    color: var(--text-light);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
 }
 
-.footer-contact i {
-    color: var(--accent-color);
-    width: 20px;
+.social-media-minimal a:hover {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    transform: translateY(-3px);
 }
 
-.copyright {
-    text-align: center;
+.copyright-minimal {
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.2);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: rgba(255,255,255,0.8);
+    width: 100%;
 }
 
 /* ==========================================================================
