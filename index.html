@@ -14,14 +14,18 @@
 </head>
 <body>
     
-    <!-- SVG Clip Path for Hero Image -->
+    <!-- SVG Clip Path for Split Sections -->
     <svg width="0" height="0">
         <defs>
-            <clipPath id="hero-curve" clipPathUnits="objectBoundingBox">
+            <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
                 <!-- S-Curve: Starts at top x=0.55, bulges left in the middle, then sweeps left at the bottom -->
                 <path d="M 0.55 0 C 0.45 0.3, 0.3 0.6, 0.4 1 L 1 1 L 1 0 Z" />
             </clipPath>
-            <clipPath id="hero-curve-mobile" clipPathUnits="objectBoundingBox">
+            <clipPath id="curve-left" clipPathUnits="objectBoundingBox">
+                <!-- S-Curve: Starts at top x=0.45, bulges right in the middle, then sweeps right at the bottom -->
+                <path d="M 0 0 L 0.45 0 C 0.55 0.3, 0.7 0.6, 0.6 1 L 0 1 Z" />
+            </clipPath>
+            <clipPath id="curve-mobile" clipPathUnits="objectBoundingBox">
                 <path d="M 0 0 L 1 0 L 1 1 L 0 1 Z" /> <!-- Flat for mobile -->
             </clipPath>
         </defs>
@@ -56,9 +60,9 @@
     <div class="overlay"></div>
 
     <!-- Hero / Banner Section -->
-    <section class="banner" id="home">
-        <div class="banner-left">
-            <div class="banner-content fade-in-up">
+    <section class="split-section" id="home">
+        <div class="split-text split-left">
+            <div class="split-content fade-in-up">
                 <span class="subtitle">LOUIS PANDAME SIREGAR</span>
                 <h1>DELIVERING<br>QUALITY<br>PRODUCTS TO YOU</h1>
                 <p>We are committed to fulfill the demands of our valued customers through comprehensive services and worldwide premium goods.</p>
@@ -71,95 +75,95 @@
             </div>
         </div>
         
-        <div class="banner-right">
+        <div class="split-img split-right">
             <img src="1.webp" alt="Premium F&B">
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section class="about" id="about">
-        <div class="wrapper about-wrapper">
-            <div class="about-left fade-in-left">
-                <div class="title-section">
-                    <span class="section-subtitle">LOUIS PANDAME SIREGAR</span>
-                    <h2>GLOBAL IMPORTER, NATIONWIDE DISTRIBUTION</h2>
-                </div>
-            </div>
-            <div class="about-right fade-in-right">
+    <section class="split-section bg-secondary" id="about">
+        <div class="split-img split-left">
+            <img src="2.webp" alt="Global Importer">
+        </div>
+
+        <div class="split-text split-right">
+            <div class="split-content fade-in-up">
+                <span class="section-subtitle">LOUIS PANDAME SIREGAR</span>
+                <h2>GLOBAL IMPORTER, NATIONWIDE DISTRIBUTION</h2>
                 <p>We provide a wide selection of high-quality products, both from international and local brands.</p>
                 <p>Distributing them to you through our comprehensive services, covering big and satellite cities throughout Indonesia.</p>
+                <br>
                 <a href="#about" class="button">About Us</a>
             </div>
         </div>
     </section>
 
     <!-- Product Section -->
-    <section class="product" id="product">
-        <div class="wrapper product-wrapper">
-            <div class="product-left fade-in-left">
-                <div class="title-section">
-                    <span class="section-subtitle">PREMIUM SELECTION</span>
-                    <h2>YOUR CHOICE OF EXCELLENT PRODUCTS</h2>
-                    <p>Wide selection of products from trusted brands & suppliers.</p>
-                    <br>
-                    <a href="#product" class="button">DISCOVER MORE</a>
-                </div>
-            </div>
-            <div class="product-right fade-in-right">
-                <figure class="product-featured-img">
-                    <img src="2.webp" alt="Premium F&B Product">
-                </figure>
+    <section class="split-section" id="product">
+        <div class="split-text split-left">
+            <div class="split-content fade-in-up">
+                <span class="section-subtitle">PREMIUM SELECTION</span>
+                <h2>YOUR CHOICE OF EXCELLENT PRODUCTS</h2>
+                <p>Wide selection of products from trusted brands & suppliers.</p>
+                <br>
+                <a href="#product" class="button">DISCOVER MORE</a>
             </div>
         </div>
 
-        <div class="product-other">
-            <div class="wrapper">
-                <div class="product-other-title fade-in-up">
-                    <span class="section-subtitle">OTHER PRODUCT CATEGORIES</span>
-                </div>
-                <div class="product-grid">
-                    <a href="#" class="product-card fade-in-up" style="transition-delay: 0.1s;">
-                        <figure>
-                            <img src="3.webp" alt="Fresh Ingredients">
-                            <figcaption>Fresh Ingredients</figcaption>
-                        </figure>
-                    </a>
-                    <a href="#" class="product-card fade-in-up" style="transition-delay: 0.2s;">
-                        <figure>
-                            <img src="4.webp" alt="Processed Food">
-                            <figcaption>Processed Food</figcaption>
-                        </figure>
-                    </a>
-                    <a href="#" class="product-card fade-in-up" style="transition-delay: 0.3s;">
-                        <figure>
-                            <img src="5.webp" alt="Beverages & Syrups">
-                            <figcaption>Beverages</figcaption>
-                        </figure>
-                    </a>
-                </div>
+        <div class="split-img split-right">
+            <img src="3.webp" alt="Premium Products">
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="product-grid-section">
+        <div class="wrapper">
+            <div class="product-other-title fade-in-up">
+                <span class="section-subtitle text-center">OTHER PRODUCT CATEGORIES</span>
+            </div>
+            <div class="product-grid">
+                <a href="#" class="product-card fade-in-up" style="transition-delay: 0.1s;">
+                    <figure>
+                        <img src="4.webp" alt="Processed Food">
+                        <figcaption>Processed Food</figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="product-card fade-in-up" style="transition-delay: 0.2s;">
+                    <figure>
+                        <img src="5.webp" alt="Beverages & Syrups">
+                        <figcaption>Beverages</figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="product-card fade-in-up" style="transition-delay: 0.3s;">
+                    <figure>
+                        <img src="2.webp" alt="Fresh Ingredients">
+                        <figcaption>Fresh Ingredients</figcaption>
+                    </figure>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Distribution Section -->
-    <section class="distribution" id="distribution">
-        <div class="wrapper distribution-wrapper">
-            <div class="distribution-left fade-in-left">
-                <div class="title-section">
-                    <span class="section-subtitle">DISTRIBUTION</span>
-                    <h2>EXTENSIVE SERVICES & FACILITIES</h2>
-                    <p>Fully equipped from end to end: warehousing, processing, and logistics.</p>
-                </div>
-            </div>
-            <div class="distribution-right fade-in-right">
+    <section class="split-section bg-secondary" id="distribution">
+        <div class="split-img split-left">
+            <img src="4.webp" alt="Extensive Services">
+        </div>
+
+        <div class="split-text split-right">
+            <div class="split-content fade-in-up">
+                <span class="section-subtitle">DISTRIBUTION</span>
+                <h2>EXTENSIVE SERVICES & FACILITIES</h2>
+                <p>Fully equipped from end to end: warehousing, processing, and logistics.</p>
+                
                 <div class="stats-grid">
                     <div class="stat-box">
                         <h3>15+</h3>
-                        <p>Distribution Points</p>
+                        <p>Points</p>
                     </div>
                     <div class="stat-box">
                         <h3>1000+</h3>
-                        <p>Happy Partners</p>
+                        <p>Partners</p>
                     </div>
                 </div>
             </div>

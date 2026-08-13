@@ -245,9 +245,9 @@ header.scrolled .nav-menu .btn-lang {
 }
 
 /* ==========================================================================
-   Hero / Banner
+   Split Sections (Hero, About, Product, Distribution)
    ========================================================================== */
-.banner {
+.split-section {
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -255,33 +255,97 @@ header.scrolled .nav-menu .btn-lang {
     background-color: var(--bg-main);
 }
 
-.banner-left {
+.split-section.bg-secondary {
+    background-color: var(--secondary-bg);
+}
+
+.split-section.bg-secondary h2, 
+.split-section.bg-secondary p, 
+.split-section.bg-secondary .section-subtitle,
+.split-section.bg-secondary .stat-box h3,
+.split-section.bg-secondary .stat-box p {
+    color: var(--text-light);
+}
+
+.split-section.bg-secondary .button {
+    background-color: transparent;
+    color: var(--text-light);
+    border-color: var(--text-light);
+}
+
+.split-section.bg-secondary .button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #FFFFFF;
+}
+
+/* Base text container */
+.split-text {
     flex: 0 0 50%;
-    padding: 10% 5% 5% 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     z-index: 2;
+}
+
+/* Background texture for text left */
+.split-text.split-left {
+    padding: 10% 5% 5% 10%;
     background: url('data:image/svg+xml;utf8,<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.03"/></svg>');
 }
 
-.banner-content {
+/* Text right */
+.split-text.split-right {
+    margin-left: auto; /* Push to right side */
+    padding: 10% 10% 5% 5%;
+}
+
+.split-content {
     max-width: 500px;
 }
 
-.banner-content p {
+.split-content p {
     font-size: 0.95rem;
     margin-top: 1.5rem;
     margin-bottom: 2.5rem;
-    color: #666;
+    color: inherit;
+    opacity: 0.9;
     max-width: 400px;
     line-height: 1.8;
 }
 
-.banner-content h1 {
-    /* Highlight Teks sesuai arahan bisa diberikan pada bagian tertentu, 
-       namun secara default h1 berwarna Hijau Segar. */
+/* Absolute image containers */
+.split-img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.split-img.split-right {
+    right: 0;
+}
+
+.split-img.split-left {
+    left: 0;
+}
+
+.split-img.split-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: url(#curve-right);
+    -webkit-clip-path: url(#curve-right);
+}
+
+.split-img.split-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: url(#curve-left);
+    -webkit-clip-path: url(#curve-left);
 }
 
 .scroll-vertical {
@@ -305,87 +369,12 @@ header.scrolled .nav-menu .btn-lang {
     background-color: var(--accent-color);
 }
 
-.banner-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.banner-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    clip-path: url(#hero-curve);
-    -webkit-clip-path: url(#hero-curve);
-}
-
 /* ==========================================================================
-   About Us
+   Product Grid & Stats
    ========================================================================== */
-.about {
-    padding: 8rem 0;
+.product-grid-section {
+    padding: 4rem 0 6rem;
     background-color: var(--bg-white);
-}
-
-.about-wrapper {
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-}
-
-.about-left, .about-right {
-    flex: 1;
-}
-
-.about-right p {
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.8;
-}
-
-/* ==========================================================================
-   Product Section
-   ========================================================================== */
-.product {
-    padding: 8rem 0;
-    background-color: var(--bg-main);
-}
-
-.product-wrapper {
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-    margin-bottom: 6rem;
-}
-
-.product-left {
-    flex: 1;
-}
-
-.product-right {
-    flex: 1;
-}
-
-.product-featured-img {
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border-radius: 8px;
-}
-
-.product-featured-img img {
-    transition: transform 0.5s ease;
-}
-
-.product-featured-img:hover img {
-    transform: scale(1.05);
-}
-
-.product-other {
-    padding-top: 4rem;
 }
 
 .product-grid {
@@ -434,57 +423,34 @@ header.scrolled .nav-menu .btn-lang {
     text-transform: uppercase;
 }
 
-/* ==========================================================================
-   Distribution Section
-   ========================================================================== */
-.distribution {
-    padding: 8rem 0;
-    background-color: var(--bg-white);
-}
-
-.distribution-wrapper {
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-}
-
-.distribution-left, .distribution-right {
-    flex: 1;
-}
-
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-/* Background Sekunder / Boks - Menggunakan Hijau Sage */
 .stat-box {
-    padding: 3rem 2rem;
-    background-color: var(--secondary-bg);
+    padding: 2rem 1.5rem;
+    background-color: rgba(255,255,255,0.1);
     text-align: center;
     border-radius: 8px;
-    border-top: 3px solid var(--primary-color);
+    border-top: 3px solid var(--accent-color);
     transition: transform 0.3s ease;
-    color: var(--text-light);
 }
 
 .stat-box:hover {
     transform: translateY(-5px);
+    background-color: rgba(255,255,255,0.15);
 }
 
 .stat-box h3 {
-    font-size: 2.5rem;
-    color: var(--text-light);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
 }
 
 .stat-box p {
-    font-weight: 500;
-    color: var(--text-light);
-    text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     letter-spacing: 1px;
 }
 
@@ -642,34 +608,35 @@ footer {
    Responsive Design
    ========================================================================== */
 @media (max-width: 992px) {
-    .banner {
+    .split-section {
         flex-direction: column;
+        min-height: auto;
     }
     
-    .banner-right {
+    .split-img {
         position: relative;
         height: 50vh;
+        width: 100%;
     }
     
-    .banner-right img {
-        clip-path: url(#hero-curve-mobile);
-        -webkit-clip-path: url(#hero-curve-mobile);
+    .split-img.split-right img,
+    .split-img.split-left img {
+        clip-path: url(#curve-mobile);
+        -webkit-clip-path: url(#curve-mobile);
     }
     
-    .banner-left {
+    .split-text {
         flex: none;
+        width: 100%;
+    }
+
+    .split-text.split-left,
+    .split-text.split-right {
         padding: 6rem 5% 4rem;
+        margin-left: 0;
     }
 
     .scroll-vertical { display: none; }
-    
-    .about-wrapper, .product-wrapper, .distribution-wrapper {
-        flex-direction: column;
-        gap: 3rem;
-    }
-    
-    .product-left { order: 1; }
-    .product-right { order: 2; }
     
     .footer-wrapper {
         grid-template-columns: 1fr;
