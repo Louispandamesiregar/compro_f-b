@@ -457,12 +457,28 @@ header.scrolled .nav-menu .btn-lang {
 /* ==========================================================================
    Inquiry Section
    ========================================================================== */
-/* Bagian form/inquiry menggunakan warna Hijau Segar atau Hijau Sage */
 .inquiry {
-    padding: 6rem 0;
-    background-color: var(--primary-color);
+    padding: 8rem 0;
     position: relative;
     overflow: hidden;
+    background: url('../5.webp') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.inquiry::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 157, 143, 0.85); /* Hijau Segar overlay */
+    z-index: 0;
+}
+
+.inquiry-wrapper {
+    position: relative;
+    z-index: 1;
 }
 
 .inquiry-box {
