@@ -11,7 +11,8 @@
     --text-light: #FAFAFA;
     --bg-white: #FFFFFF;
     --transition-speed: 0.3s;
-    --font-primary: 'Inter', sans-serif;
+    --font-primary: 'Open Sans', sans-serif;
+    --font-heading: 'Lora', serif;
 }
 
 * {
@@ -59,6 +60,7 @@ img {
    Typography & Reusables
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
