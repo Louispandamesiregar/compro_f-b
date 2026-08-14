@@ -526,41 +526,35 @@ header.scrolled .nav-menu .btn-lang {
 footer {
     background-color: var(--secondary-bg); /* Menggunakan Hijau Sage agar serasi */
     color: var(--text-light);
-    padding: 5rem 0 3rem;
-    text-align: center;
+    padding: 2rem 0; /* Drastically reduced vertical padding */
 }
 
 .footer-wrapper-minimal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Horizontal layout for desktop */
+    justify-content: space-between;
     align-items: center;
-    gap: 2.5rem;
-    max-width: 600px;
+    gap: 1.5rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-brand .logo-text {
     display: block;
-    margin-bottom: 1rem;
     color: var(--text-light);
-    font-size: 2rem;
-}
-
-.footer-brand p {
-    font-size: 1rem;
-    color: var(--text-light);
-    line-height: 1.6;
+    font-size: 1.5rem;
+    margin-bottom: 0;
 }
 
 .footer-links-minimal {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .footer-links-minimal a {
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-light);
     text-transform: uppercase;
@@ -573,19 +567,19 @@ footer {
 
 .social-media-minimal {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .social-media-minimal a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.1);
     color: var(--text-light);
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -596,11 +590,8 @@ footer {
 }
 
 .copyright-minimal {
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: rgba(255,255,255,0.8);
-    width: 100%;
 }
 
 /* ==========================================================================
@@ -661,6 +652,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .footer-wrapper-minimal {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
     header { padding: 1rem 5%; }
     .menu-toggle { display: flex; }
     
