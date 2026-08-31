@@ -672,8 +672,10 @@ header.scrolled .nav-menu .btn-lang {
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                height 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                height 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s ease;
 }
 
 @media (min-width: 768px) {
