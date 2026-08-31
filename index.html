@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis Pandame Siregar - Premium F&B Products</title>
-    <meta name="description" content="Louis Pandame Siregar - Menyediakan produk Food & Beverage premium dan layanan distribusi ke seluruh Indonesia.">
+    <title>Naya - Premium F&B Products</title>
+    <meta name="description" content="Naya - Menyediakan produk Food & Beverage premium dan layanan distribusi ke seluruh Indonesia.">
     <!-- Google Fonts: Lora (Headings) & Open Sans (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <body>
     
     <!-- SVG Clip Path for Split Sections -->
-    <svg width="0" height="0">
+    <svg width="0" height="0" style="position: absolute; display: none;">
         <defs>
             <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
                 <!-- S-Curve: Starts at top x=0.55, bulges left in the middle, then sweeps left at the bottom -->
@@ -35,8 +35,8 @@
     <header id="header">
         <div class="header-container">
             <a href="#" class="logo">
-                <img src="https://ui-avatars.com/api/?name=Louis+F%26B&background=2A9D8F&color=fff&rounded=true&size=48" alt="Logo" class="logo-img" style="display:none;">
-                <span class="logo-text">LOUIS F&B</span>
+                <img src="https://ui-avatars.com/api/?name=Naya+FnB&background=2A9D8F&color=fff&rounded=true&size=48" alt="Logo" class="logo-img" style="display:none;">
+                <span class="logo-text">NAYA RESTO</span>
             </a>
             
             <nav class="nav-menu">
@@ -60,40 +60,72 @@
     <div class="overlay"></div>
 
     <!-- Hero / Banner Section -->
-    <section class="split-section" id="home">
-        <div class="split-text split-left">
-            <div class="split-content fade-in-up">
-                <span class="subtitle">LOUIS PANDAME SIREGAR</span>
-                <h1>DELIVERING<br>QUALITY<br>PRODUCTS TO YOU</h1>
-                <p>We are committed to fulfill the demands of our valued customers through comprehensive services and worldwide premium goods.</p>
-            </div>
-            
-            <!-- Vertical Scroll Down -->
-            <div class="scroll-vertical">
-                <span>SCROLL DOWN</span>
-                <div class="scroll-line"></div>
-            </div>
-        </div>
+    <section class="hero-section" id="home">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/videos/resto.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         
-        <div class="split-img split-right">
-            <img src="1.webp" alt="Premium F&B">
+        <div class="hero-content fade-in-up">
+            <span class="subtitle hero-subtitle">Naya</span>
+            <h1 class="hero-title">DELIVERING<br>QUALITY<br>PRODUCTS TO YOU</h1>
+            <p class="hero-text">We are committed to fulfill the demands of our valued customers through comprehensive services and worldwide premium goods.</p>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section class="split-section bg-secondary" id="about">
-        <div class="split-img split-left">
-            <img src="2.webp" alt="Global Importer">
-        </div>
-
-        <div class="split-text split-right">
-            <div class="split-content fade-in-up">
-                <span class="section-subtitle">LOUIS PANDAME SIREGAR</span>
+    <!-- About Us Section (Interactive Tabs) -->
+    <section class="interactive-about" id="about">
+        <div class="wrapper interactive-container">
+            <!-- Left Column: Tabs -->
+            <div class="interactive-text">
+                <span class="section-subtitle">Naya</span>
                 <h2>GLOBAL IMPORTER, NATIONWIDE DISTRIBUTION</h2>
-                <p>We provide a wide selection of high-quality products, both from international and local brands.</p>
-                <p>Distributing them to you through our comprehensive services, covering big and satellite cities throughout Indonesia.</p>
-                <br>
-                <a href="#about" class="button">About Us</a>
+                
+                <div class="accordion-list">
+                    <!-- Item 1 -->
+                    <button type="button" class="accordion-btn active" data-tab="0">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <h3>High-Quality Selection</h3>
+                            <div class="accordion-body">
+                                <p>We provide a wide selection of high-quality products, both from international and local brands.</p>
+                            </div>
+                        </div>
+                    </button>
+                    <!-- Item 2 -->
+                    <button type="button" class="accordion-btn" data-tab="1">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <h3>Nationwide Distribution</h3>
+                            <div class="accordion-body">
+                                <p>Distributing them to you through our comprehensive services, covering big and satellite cities throughout Indonesia.</p>
+                            </div>
+                        </div>
+                    </button>
+                    <!-- Item 3 -->
+                    <button type="button" class="accordion-btn" data-tab="2">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <h3>Comprehensive Facilities</h3>
+                            <div class="accordion-body">
+                                <p>Fully equipped from end to end: warehousing, processing, and logistics.</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column: Media -->
+            <div class="interactive-media">
+                <img src="assets/images/2.webp" alt="High-Quality Selection" class="tab-media active" data-media="0">
+                <img src="assets/images/3.webp" alt="Nationwide Distribution" class="tab-media" data-media="1">
+                <img src="assets/images/4.webp" alt="Comprehensive Facilities" class="tab-media" data-media="2">
             </div>
         </div>
     </section>
@@ -111,35 +143,73 @@
         </div>
 
         <div class="split-img split-right">
-            <img src="3.webp" alt="Premium Products">
+            <img src="assets/images/3.webp" alt="Premium Products">
         </div>
     </section>
 
-    <!-- Product Grid Section -->
-    <section class="product-grid-section">
+    <!-- Product Carousel Section -->
+    <section class="product-carousel-section">
         <div class="wrapper">
-            <div class="product-other-title fade-in-up">
-                <span class="section-subtitle text-center">OTHER PRODUCT CATEGORIES</span>
+            <div class="carousel-header fade-in-up">
+                <h2>OTHER PRODUCT CATEGORIES</h2>
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev-btn" aria-label="Previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" aria-label="Next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
-            <div class="product-grid">
-                <a href="#" class="product-card fade-in-up" style="transition-delay: 0.1s;">
-                    <figure>
-                        <img src="4.webp" alt="Processed Food">
-                        <figcaption>Processed Food</figcaption>
-                    </figure>
-                </a>
-                <a href="#" class="product-card fade-in-up" style="transition-delay: 0.2s;">
-                    <figure>
-                        <img src="5.webp" alt="Beverages & Syrups">
-                        <figcaption>Beverages</figcaption>
-                    </figure>
-                </a>
-                <a href="#" class="product-card fade-in-up" style="transition-delay: 0.3s;">
-                    <figure>
-                        <img src="2.webp" alt="Fresh Ingredients">
-                        <figcaption>Fresh Ingredients</figcaption>
-                    </figure>
-                </a>
+        </div>
+        
+        <div class="carousel-track-container fade-in-up">
+            <div class="carousel-track">
+                <!-- Card 1 -->
+                <div class="carousel-card">
+                    <img src="assets/images/4.webp" alt="Processed Food" class="carousel-bg">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-content">
+                        <h3>Processed Food</h3>
+                        <p class="carousel-desc">High-quality processed foods sourced from trusted global partners.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="carousel-card">
+                    <img src="assets/images/5.webp" alt="Beverages & Syrups" class="carousel-bg">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-content">
+                        <h3>Beverages & Syrups</h3>
+                        <p class="carousel-desc">Premium syrups and beverages for cafes, restaurants, and retail.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="carousel-card">
+                    <img src="assets/images/2.webp" alt="Fresh Ingredients" class="carousel-bg">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-content">
+                        <h3>Fresh Ingredients</h3>
+                        <p class="carousel-desc">Farm-fresh ingredients delivered with comprehensive logistics.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="carousel-card">
+                    <img src="assets/images/3.webp" alt="Premium Selections" class="carousel-bg">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-content">
+                        <h3>Premium Selections</h3>
+                        <p class="carousel-desc">Excellent choices of premium grade products for your business.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="carousel-card">
+                    <img src="assets/images/1.webp" alt="Specialty Items" class="carousel-bg">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-content">
+                        <h3>Specialty Items</h3>
+                        <p class="carousel-desc">Unique culinary products to elevate your menu offerings.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -147,7 +217,7 @@
     <!-- Distribution Section -->
     <section class="split-section bg-secondary" id="distribution">
         <div class="split-img split-left">
-            <img src="4.webp" alt="Extensive Services">
+            <img src="assets/images/4.webp" alt="Extensive Services">
         </div>
 
         <div class="split-text split-right">
@@ -193,7 +263,7 @@
     <footer>
         <div class="wrapper footer-wrapper-minimal">
             <div class="footer-brand">
-                <span class="logo-text">LOUIS F&B</span>
+                <span class="logo-text">NAYA RESTO</span>
             </div>
             
             <div class="footer-links-minimal">
@@ -210,7 +280,7 @@
             </div>
 
             <div class="copyright-minimal">
-                <p>&copy; 2026 Louis Pandame Siregar. All Rights Reserved.</p>
+                <p>&copy; 2026 Naya. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
