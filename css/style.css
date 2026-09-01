@@ -23,7 +23,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 14px; /* Default was 16px. Dikurangi agar semua ukuran (rem) mengecil proporsional */
 }
 
 body {
