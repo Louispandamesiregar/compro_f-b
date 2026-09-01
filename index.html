@@ -131,23 +131,21 @@
     </section>
 
     <!-- Product Section -->
-    <section class="relative w-full border-none bg-white text-gray-900 py-32 px-8 md:px-12 flex flex-col items-center text-center overflow-hidden" id="product">
-        <div class="absolute top-0 inset-x-0 w-full pointer-events-none z-0">
-            <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-white via-white/80 to-transparent z-10"></div>
-            <img src="assets/images/3.webp" alt="Premium Products" class="w-full h-[350px] block object-cover opacity-90 filter brightness-105" aria-hidden="true">
+    <section id="product" class="product-banner-section">
+        <div class="product-banner-image-container">
+            <img src="assets/images/3.webp" alt="Premium Products" class="product-banner-img">
+            <div class="product-banner-gradient"></div>
         </div>
-        <div class="relative w-full max-w-3xl z-10 mt-16">
-            <div class="fade-in-up">
-                <span class="section-subtitle mb-4 block tracking-widest text-xs font-bold uppercase text-[#2A9D8F]">PREMIUM SELECTION</span>
-                <h2 class="text-balance font-serif mt-4 text-4xl md:text-5xl lg:text-[64px] leading-[1.05] text-gray-900 tracking-tight mb-8">YOUR CHOICE OF EXCELLENT PRODUCTS</h2>
-                <p class="text-balance text-lg md:text-xl text-gray-600 font-light leading-relaxed mb-12 max-w-2xl mx-auto">Wide selection of products from trusted brands & suppliers.</p>
-                <div class="flex flex-col items-center gap-6">
-                    <a href="#product" class="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gray-900 text-white rounded-md font-medium text-lg hover:bg-gray-800 transition-all w-full sm:w-auto shadow-sm group">
-                        DISCOVER MORE 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                    </a>
-                </div>
-            </div>
+        
+        <div class="product-banner-content fade-in-up">
+            <span class="product-banner-subtitle">PREMIUM SELECTION</span>
+            <h2 class="product-banner-title">YOUR CHOICE OF EXCELLENT PRODUCTS</h2>
+            <p class="product-banner-desc">Wide selection of products from trusted brands &amp; suppliers.</p>
+            
+            <a href="#product" class="product-banner-btn group">
+                DISCOVER MORE 
+                <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            </a>
         </div>
     </section>
 
