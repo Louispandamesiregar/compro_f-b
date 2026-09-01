@@ -1158,3 +1158,198 @@ footer {
 .product-banner-btn:hover .arrow-icon {
     transform: translateX(4px);
 }
+
+/* ==========================================================================
+   Pricing / Receipt Section (Replacing Distribution)
+   ========================================================================== */
+.pricing-section {
+    padding: 6rem 1rem;
+    background-color: var(--bg-main, #FAFAFA);
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Left: Receipt Card */
+.receipt-stage {
+    display: flex;
+    justify-content: center;
+}
+
+.receipt-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.02);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #f3f4f6;
+    position: relative;
+}
+
+.receipt-brand {
+    font-family: var(--font-heading, 'Lora', serif);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.receipt-mini {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.receipt-divider {
+    border: 0;
+    border-top: 1px dashed #d1d5db;
+    margin: 1rem 0;
+}
+
+.receipt-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.receipt-caption {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.receipt-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #111827;
+    margin: 1.5rem 0;
+}
+
+.receipt-stamp-wrap {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.receipt-stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #059669;
+    background-color: #d1fae5;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.receipt-foot {
+    text-align: left;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-top: 1rem;
+}
+
+/* Right: Content */
+.pricing-subtitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary-color, #2A9D8F);
+    margin-bottom: 1rem;
+}
+
+.pricing-head {
+    font-family: var(--font-heading, 'Lora', serif);
+    font-size: 2.25rem;
+    line-height: 1.2;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .pricing-head { font-size: 2.75rem; }
+}
+
+.pricing-lede {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.pricing-bullets {
+    margin-bottom: 2.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-bullets li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: #374151;
+}
+
+.pricing-bullets li i {
+    color: #2A9D8F;
+    font-size: 1.2rem;
+}
+
+.pricing-cta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.button-black {
+    background-color: #111827;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.button-black:hover {
+    background-color: #1f2937;
+    color: white;
+}
+
+.team-pricing-link {
+    color: #4b5563;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s;
+}
+
+.team-pricing-link:hover {
+    text-decoration-color: #4b5563;
+}
